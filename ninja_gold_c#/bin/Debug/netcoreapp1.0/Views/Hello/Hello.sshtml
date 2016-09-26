@@ -1,0 +1,35 @@
+
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+         <title>Hello</title>
+    </head>
+    <body>
+        <h1>Welcome to the Great Number Game!</h1>
+
+        <p> I am thinking of a number between 1 and 100</p>
+        <p> Take a guess!</p>
+            <br>
+        <form method="Post" action="/post">
+            <input type='text' id='Guess' name='Guess'>
+            <input type='submit' value='submit'>
+        </form>
+
+         <form method="Get" action="/reset">
+            <input type='submit' value='Reset'>
+            </form>
+
+        <h1>@ViewBag.mySession</h1>
+
+        <h1>@ViewBag.textMessage</h1>
+
+        @If.Context.ViewBag.textMessage
+        <p>I only appear if ViewBag.textMessage is true!</p>
+        <h1>@ViewBag.textMessage</h1>
+        @EndIf
+        
+
+
+
+    </body>
+</html>
